@@ -32,7 +32,7 @@ def dbhook():
             return result
         return wrapper
     return _
-
+d
 
 urls = (
     '/', 'index'
