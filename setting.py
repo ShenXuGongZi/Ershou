@@ -27,8 +27,20 @@ for row in DBShuC:
     Shijian = row[3]
 
 
-# print col_name_list
+
+
+# def tr():
+# for test in row:
+#     cc = u'<tr><td><a href="%r" target="_blank">%r</a></td><td>%r</td><td>%r</td></tr>'%(Lianj,Bioti,Laiy,Shijian)
+#         # print XunHtrs
+#         #     print u'<td><a href="%r" target="_blank">%r</a></td>'%(Lianj,Bioti)
+#         #     print u'<td>%r</td>'%Laiy
+#         #     print u'<td>%r</td>'%Shijian
+#
+# # XunHtr = tr()
 conn.close()
+
+# print col_name_list
 
 urls = (
     '/', 'index'
@@ -52,6 +64,7 @@ class index:
             link=Lianj,
             post=Bioti,
             name=Laiy,
-            time=Shijian)
+            time=Shijian,
+            )
 
 # print render.demo()

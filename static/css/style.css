@@ -1,0 +1,67 @@
+/*
+ *by:肾虚公子
+ *二手网站CSS
+ *喵喵的二手站('http://ershou.miaowu.asia')
+ *2014年7月制作
+*/
+.menu{
+    background: #f0f6f3;
+}
+.navs .nav-wrap {
+border-bottom: 1px solid #e5ebe4;
+}
+
+
+.centers{
+    padding-top:20px;
+    width: 960px;
+    margin:0 auto;
+}
+.estable{
+    height: 28px;
+    color: #d5d5d5;
+    background-color: #545652;
+    margin-bottom: 20px;
+}
+.estable li{
+    display: inline-block;
+}
+.estable a {
+    color:#F0F0F0;
+    display: inline-block;
+    zoom: 1;
+    padding: 3px 0 0 10px;
+}
+.estable a:link{
+    color:#d5d5d5;
+}
+.estable a:hover{
+    text-decoration: none;
+    color:#d5d5d5
+}
+.kztable{
+    width: 960px;
+    margin: 0 auto;
+}
+.centers a:visited{
+    color: #669;
+    text-decoration: none;
+}
+.centers a:link {
+    color: #37a;
+    text-decoration: none;
+}
+.centers a:hover{
+    color:#fff;
+    text-decoration:none;
+    background:#37a;
+}
+.footer{
+    color: #979797;
+    padding: 6px 0;
+    margin-top: 10px;
+    border-top: 1px dashed #ddd;
+    width: 960px;
+    margin: 0 auto;
+}
+/*border-bottom: 1px dashed #ddd;*/
