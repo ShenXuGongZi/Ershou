@@ -1,11 +1,6 @@
-#-*- coding: utf-8 -*
+#encoding: utf-8
 import requests
 from pyquery import PyQuery as pq
-import time
-import sqlite3
-
-conn = sqlite3.connect('/home/hang/文档/PythonEX/Ershou/DB/ershou.db')
-LjDB = conn.cursor()
 
 class Ershou:
     def __init__(self,url,host,webname):
@@ -42,15 +37,8 @@ class Ershou:
             title = tr('th a').eq(1).text()
             link = self.get_host + tr('th a').eq(1).attr.href
             nname = self.wname
-            #时间
-            times = time.strftime('%Y-%m-%d',time.localtime(time.time()))
-            Piliang = [title,link,nname,times]
-            LjDB.execute("insert into caiji values (?,?,?,?)",Piliang)
-            conn.commit()
-            # print("post:%s link: %s %r %r" %(title,link,nname,times))
+            print("post:%s link: %s %r" %(title,link,nname))
 
 #if __name__ == '__main__':
 Ershou("http://bbs.tgbus.com/forum-50-2.html",'http://bbs.tgbus.com/','TGbus')
 Ershou('http://bbs.feng.com/forum.php?mod=forumdisplay&fid=29&page=2','http://bbs.feng.com/','WeiFeng')
-#关闭数据库
-conn.close()

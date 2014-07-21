@@ -1,5 +1,4 @@
 {% include "header.html" %}
-
 <body>
 <div class="menu">
 <nav class="navbar navbar-default" role="navigation">
@@ -32,13 +31,16 @@
         </tr>
       </thead>
     <tbody>
+    {% for post in posts %}
     <tr>
-         <td><a href="{{link}}" target="_blank">{{post}}</a></td>
-            <td>{{name}}</td>
-            <td>{{time}}</td>
-        </tr>
+        <td><a href="{{post[1]}}" target="_blank">{{post[0]}}</a></td>
+        <td>{{post[2]}}</td>
+        <td>{{post[3]}}</td>
+
+    {% endfor %}
     </tbody>
     </table>
+
 
 <!--分页-->
     <ul class="pagination">
