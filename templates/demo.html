@@ -1,0 +1,53 @@
+{% include "header.html" %}
+
+<body>
+<div class="menu">
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        {{title}}
+      </a>
+    </div>
+      <p class="navbar-text">{{info}}</p>
+  </div>
+</nav>
+</div>
+<div class="estable">
+    <div class="kztable">
+    <ul>
+        <li><a href="#">电玩</a></li>
+        <li><a href="#">数码</a></li>
+    </ul>
+</div>
+    </div>
+<div class="centers">
+<p><span class="glyphicon glyphicon glyphicon-bullhorn"></span>&nbsp;{{gonggao_h}}</p>
+    <table class="table">
+        <thead>
+        <tr>
+          <th>标题</th>
+          <th>来源</th>
+          <th>时间</th>
+        </tr>
+      </thead>
+    <tbody>
+      <tr>
+      <td><a href="{{link}}" target="_blank">{{post}}</a></td>
+      <td>{{name}}</td>
+      <td>{{time}}</td>
+      </tr>
+      </tbody>
+    </table>
+<!--分页-->
+    <ul class="pagination">
+        <li><a href="#">&laquo;</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">&raquo;</a></li>
+    </ul>
+</div>
+{% include "footer.html" %}
