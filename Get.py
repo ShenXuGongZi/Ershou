@@ -7,7 +7,8 @@ import sqlite3
 conn = sqlite3.connect('/home/hang/文档/PythonEX/Ershou/DB/ershou.db')
 LjDB = conn.cursor()
 #创建数据库 并设置自增长id INTEGER PRIMARY KEY
-#LjDB.execute('''create table caiji (Id INTEGER PRIMARY KEY,post text, link text, name text,  date text)''')
+# LjDB.execute('''create table caiji (Id INTEGER PRIMARY KEY,post text, link text, name text,  date text)''')
+LjDB.execute('''create table caiji (cid INTEGER PRIMARY KEY,post text, link text, name text,date text,page text)''')
 
 class Ershou:
     def __init__(self,url,host,webname):
@@ -46,9 +47,10 @@ class Ershou:
             nname = self.wname
             #时间
             times = time.strftime('%Y-%m-%d',time.localtime(time.time()))
-            Piliang = [title,link,nname,times]
+            pages = 'page'
+            Piliang = [title,link,nname,times,pages]
             #写入指定的表
-            LjDB.execute("insert into caiji(post,link,name,date) values (?,?,?,?)",Piliang)
+            LjDB.execute("insert into caiji(post,link,name,date,page) values (?,?,?,?,?)",Piliang)
             conn.commit()
             # print("post:%s link: %s %r %r" %(title,link,nname,times))
 

@@ -1,0 +1,56 @@
+{% include "header.html" %}
+<body>
+<div class="menu">
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        {{title}}
+      </a>
+    </div>
+      <p class="navbar-text">{{info}}</p>
+  </div>
+</nav>
+</div>
+<div class="estable">
+    <div class="kztable">
+    <ul>
+        <li><a href="#">电玩</a></li>
+        <li><a href="#">数码</a></li>
+    </ul>
+</div>
+    </div>
+
+ <div class="centers">
+<p><span class="glyphicon glyphicon glyphicon-bullhorn"></span>&nbsp;{{gonggao_h}}</p>
+    <table class="table">
+        <thead>
+        <tr>
+          <th>交易帖子</th>
+          <th>来源</th>
+          <th>时间</th>
+        </tr>
+      </thead>
+    <tbody>
+   {% for td in article %}
+    <tr>
+        <td><a href="{{ td.link }}" target="_blank">{{ td.post }}</a></td>
+        <td>{{ td.name }}</td>
+        <td>{{td.date}}</td>
+        <td>{{td.cid}}</td>
+         {% if loop.index%5 == 0 and not loop.last %}
+    </tr>
+           {% endif %}
+    {% endfor %}
+    </tbody>
+    </table>
+
+
+<!--分页-->
+    <ul class="pagination">
+        {% for p in page %}
+         <li>{{ p }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% include "footer.html" %}

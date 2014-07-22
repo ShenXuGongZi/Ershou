@@ -1,9 +1,19 @@
-$def with(todos,pages)
+ <div class="info">
 
-    <div class="box">
-     ...
-    <p>Page:
-            $for page in range(1,pages+1):
-            <a href="/todo/$page">$page</a>
-    </p>
+            <ul class="article">
+                {% for a in article %}
+                    <li><span>{{ a.data }}</span><a href="/newsshow/{{ a.id }}">{{ a.title }}</a></li>
+                    {% if loop.index%5 == 0 and not loop.last %}
+                        <hr>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+
+            <div class="pagination">
+                <ul>
+                    {% for p in page %}
+                        <li>{{ p }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
