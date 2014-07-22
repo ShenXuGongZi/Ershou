@@ -46,7 +46,7 @@ def page(p=1, total=1):
 def get_all_article(p, cid):
     start = (p - 1)*page_size
     offset = page_size
-    article = db.select('caiji',order='cid desc,post desc,link desc,name desc,tag,date desc',
+    article = db.select('caiji',order='link desc,date desc,cid desc,post desc,name desc,tag',
                         limit="$start,$offset", vars=locals())
     return article	#获取文章
 
@@ -60,7 +60,7 @@ def get_page(p, pages):
 def get_all_tag(p, tags):
     start = (p - 1)*page_size
     offset = page_size
-    tag = db.select('caiji',where="tag=$tags",order='cid desc,post desc,link desc,name desc,date desc,tag',
+    tag = db.select('caiji',where="tag=$tags",order='date desc,cid desc,post desc,link desc,name desc,tag desc',
                         limit="$start,$offset", vars=locals())
     return tag	#获取文章
 #

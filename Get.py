@@ -9,7 +9,7 @@ conn = sqlite3.connect('/home/hang/文档/PythonEX/Ershou/DB/ershou.db')
 conn.text_factory = str
 LjDB = conn.cursor()
 #创建数据库 并设置自增长id INTEGER PRIMARY KEY
-# LjDB.execute('''create table caiji (cid INTEGER PRIMARY KEY,post text, link text, name text,date text,page text,tag text)''')
+LjDB.execute('''create table caiji (cid INTEGER PRIMARY KEY,post text, link text, name text,date text,page text,tag text)''')
 
 class Ershou:
     def __init__(self,url,host,webname,tage):
@@ -53,18 +53,22 @@ class Ershou:
             tagess = self.ntage
             #时间
             # times = time.strftime('%Y-%m-%d',time.localtime(time.time()))
-            # times = tr('td[class="by"] em').eq(1).text()
-            times = tr('span').eq(1).text()
+            times = tr('td[class="by"] em').eq(1).text()
+            # times = tr('td em').eq(1).text()
             pages = 'page'
             Piliang = [title,link,nname,times,pages,tagess]
             #写入指定的表
             LjDB.execute("insert into caiji(post,link,name,date,page,tag) values (?,?,?,?,?,?)",Piliang)
             conn.commit()
+            #删除重复数据
+            LjDB.execute("delete from caiji where link  in (select  link  from caiji  group  by  link   having  count(link) > 1) and rowid not in (select min(rowid) from  caiji  group by link  having count(link )>1)")
             # print("post:%s link: %s %r %r" %(title,link,nname,times))
 
 #if __name__ == '__main__':
-Ershou("http://bbs.tgbus.com/forum-50-2.html",'http://bbs.tgbus.com/','电玩巴士','DianWan')
-Ershou('http://bbs.feng.com/forum.php?mod=forumdisplay&fid=29&page=2','http://bbs.feng.com/','威锋','Shuma')
-Ershou('http://www.chiphell.com/forum-97-2.html','http://www.chiphell.com/','chiphell','Shuma')
+Ershou("http://bbs.tgbus.com/forum-50-1.html",'http://bbs.tgbus.com/','电玩巴士','DianWan')
+Ershou('http://bbs.feng.com/forum.php?mod=forumdisplay&fid=29&page=1','http://bbs.feng.com/','威锋','Shuma')
+# Ershou('http://www.chiphell.com/forum-97-2.html','http://www.chiphell.com/','chiphell','Shuma')
+
+
 # 关闭数据库
 conn.close()

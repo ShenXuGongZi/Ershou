@@ -84,3 +84,11 @@ class Ershou:
 # Ershou('http://bbs.feng.com/forum.php?mod=forumdisplay&fid=29&page=2','http://bbs.feng.com/','WeiFeng','Shuma')
 # Ershou('http://bbs.mydigit.cn/thread.php?fid=73&page=2','http://bbs.mydigit.cn/','chiphell','Shuma')
 Ershou('http://wwww.itocp.com/bbs/forum-102-2.html','http://wwww.itocp.com/bbs/','chiphell','Shuma')
+
+conn = sqlite3.connect('/home/hang/文档/PythonEX/Ershou/DB/ershou.db')
+#使数据库可以录入中文
+conn.text_factory = str
+LjDB = conn.cursor()
+
+ss = LjDB.execute('delete from caiji where link  in (select  link  from caiji  group  by  link   having  count(link) > 1)and rowid not in (select min(rowid) from  caiji  group by link  having count(link )>1)')
+print ss
