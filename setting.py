@@ -13,6 +13,10 @@ Gonggao_S = u'小站才开张请扩散喵！'
 dibu = u'2014. 肾虚公子 本站基于Python制作.'
 #副标题
 fubiaoti = u'{这是二手集合网站} 喵傲~~'
+#LOGO链接
+weblink = u'/index/page/1'
+#电玩标签
+dwgame = u'/tag/page/1'
 
 # #定义数据库
 # def dbhook():
