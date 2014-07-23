@@ -4084,6 +4084,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 @media (min-width: 768px) {
   .navbar-text {
     float: left;
+    padding-top: 10px;
     margin-right: 15px;
     margin-left: 15px;
   }
