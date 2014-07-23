@@ -5,6 +5,12 @@
 <title>{{title}}</title>
     <link rel="stylesheet" href="/static/css/style.css"/>
     <link rel="stylesheet" href="/static/css/bootstrap.css"/>
+    <script type="text/javascript">
+var domainroot="ershou.miaowu.asia"
+function Gsitesearch(curobj){
+curobj.q.value="site:"+domainroot+" "+curobj.qfront.value
+}
+</script>
 </head>
 <body>
 <div class="menu">
@@ -16,14 +22,35 @@
       </a>
     </div>
       <p class="navbar-text">{{info}}</p>
-  </div>
-</nav>
+
+      <div class="nav-search">
+    <form action="https://www.Google.com.hk/search" method="get" onSubmit="Gsitesearch(this)">
+    <input name="q" type="hidden" />
+    <input name="qfront" type="text" class="form-control" placeholder="搜索你感兴趣的物品吧"style="width: 180px" />
+    <!--<input type="submit" class="btn btn-success" value="开始搜索">-->
+    </form>
 </div>
-<div class="estable">
+  </div>
+
+</nav>
+
+    <div class="estable">
     <div class="kztable">
     <ul>
         <li><a href="{{game}}">电玩</a></li>
-        <li><a href="#">数码</a></li>
+        <li><a href="{{shuma}}">数码</a></li>
     </ul>
-</div>
     </div>
+    </div>
+</div>
+
+ <div class="centers">
+<p><span class="glyphicon glyphicon glyphicon-bullhorn"></span>&nbsp;{{gonggao_h}}</p>
+    <table class="table">
+        <thead>
+        <tr>
+          <th>交易帖子</th>
+          <th>来源</th>
+          <th>发帖时间</th>
+        </tr>
+      </thead>

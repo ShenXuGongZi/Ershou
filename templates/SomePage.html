@@ -1,0 +1,14 @@
+
+<form method="POST" action="/search/?name={{name}}">
+    <input type="text" name="{{name}}" value="s"/>
+    <input type="submit" value="搜索"/>
+</form>
+
+
+    {% for post in searchs %}
+    <tr>
+        <td><a href="{{post[2]}}" target="_blank">{{post[1]}}</a></td>
+        <td>{{post[3]}}</td>
+        <td>{{post[4]}}</td>
+
+    {% endfor %}

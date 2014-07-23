@@ -16,7 +16,8 @@ fubiaoti = u'{这是二手集合网站} 喵傲~~'
 #LOGO链接
 weblink = u'/index/page/1'
 #电玩标签
-dwgame = u'/tag/page/1'
+dwgame = u'/game/page/1'
+dwshuma = u'/shuma/page/1'
 
 # #定义数据库
 # def dbhook():

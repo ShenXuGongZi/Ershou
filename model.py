@@ -2,7 +2,7 @@
 import web
 from  setting import *
 
-page_size=20
+page_size=15
 
 def page(p=1, total=1):
     Page = []
@@ -46,7 +46,7 @@ def page(p=1, total=1):
 def get_all_article(p, cid):
     start = (p - 1)*page_size
     offset = page_size
-    article = db.select('caiji',order='link desc,date desc,cid desc,post desc,name desc,tag',
+    article = db.select('caiji',order='date desc,link desc,cid desc,post desc,name desc,tag',
                         limit="$start,$offset", vars=locals())
     return article	#获取文章
 
@@ -56,7 +56,7 @@ def get_page(p, pages):
     return page(p, total)	#获取分页数
 
 
-#
+#tag分类获取
 def get_all_tag(p, tags):
     start = (p - 1)*page_size
     offset = page_size
@@ -67,6 +67,9 @@ def get_all_tag(p, tags):
 def get_tag(p, tags):
     total = db.query("SELECT COUNT(*) AS idtag FROM caiji where tag=$tags", vars=locals())[0].idtag
     return page(p, total)	#获取分页数
+
+
+
 
 #首页函数
 #定义数据库

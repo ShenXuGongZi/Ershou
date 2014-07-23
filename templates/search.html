@@ -1,0 +1,14 @@
+{% include "header.html" %}
+    <tbody>
+    {% for post in searchs %}
+    <tr>
+        <td><a href="{{post[2]}}" target="_blank">{{post[1]}}</a></td>
+        <td>{{post[3]}}</td>
+        <td>{{post[4]}}</td>
+
+    {% endfor %}
+    </table>
+
+
+</div>
+{% include "footer.html" %}

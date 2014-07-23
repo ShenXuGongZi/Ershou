@@ -40,7 +40,7 @@ border-bottom: 1px solid #e5ebe4;
     color:#d5d5d5
 }
 .kztable{
-    width: 960px;
+    width: 1040px;
     margin: 0 auto;
 }
 .centers a:visited{
@@ -63,5 +63,10 @@ border-bottom: 1px solid #e5ebe4;
     border-top: 1px dashed #ddd;
     width: 960px;
     margin: 0 auto;
+}
+.nav-search{
+    position: absolute;
+    right: 0;
+    padding-top: 10px;
 }
 /*border-bottom: 1px dashed #ddd;*/

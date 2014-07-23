@@ -4,8 +4,11 @@ from main import *
 
 urls = (
     '/', 'index',
-    "/index/page/(\d+)", "news",
-    "/tag/page/(\d+)", "tag",
+    "/index/page/(\d+)", "page",
+    "/game/page/(\d+)", "game",
+    "/shuma/page/(\d+)", "shuma",
+    # "/search", "search",
+    "/search/(.*)", "SomePage",
 )
 
 
