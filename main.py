@@ -26,13 +26,14 @@ class page:
                       homelink=weblink,
                       game=dwgame,
                       shuma=dwshuma,
+                      weifeng=weifengs,
                       **j)
 
 class game:
     def GET(self, p='10'):
         p = int(p)
-        j.article = model.get_all_tag(p, tags='DianWan')
-        j.page = model.get_tag(p, tags='DianWan')
+        j.article = model.get_all_tag(p, tags='dianwanbashi')
+        j.page = model.get_tag(p, tags='dianwanbashi')
         return render('game',
                       title=webname,
                       gonggao_h=Gonggao_S,
@@ -41,13 +42,14 @@ class game:
                       homelink=weblink,
                       game=dwgame,
                       shuma=dwshuma,
+                      weifeng=weifengs,
                       **j)
 
 class shuma:
     def GET(self, p='10'):
         p = int(p)
-        j.article = model.get_all_tag(p, tags='Shuma')
-        j.page = model.get_tag(p, tags='Shuma')
+        j.article = model.get_all_tag(p, tags='shumazhijia')
+        j.page = model.get_tag(p, tags='shumazhijia')
         return render('shuma',
                       title=webname,
                       gonggao_h=Gonggao_S,
@@ -56,8 +58,24 @@ class shuma:
                       homelink=weblink,
                       game=dwgame,
                       shuma=dwshuma,
+                      weifeng=weifengs,
                       **j)
 
+class weifeng:
+    def GET(self, p='10'):
+        p = int(p)
+        j.article = model.get_all_tag(p, tags='weifeng')
+        j.page = model.get_tag(p, tags='weifeng')
+        return render('weifeng',
+                      title=webname,
+                      gonggao_h=Gonggao_S,
+                      footer=dibu,
+                      info=fubiaoti,
+                      homelink=weblink,
+                      game=dwgame,
+                      shuma=dwshuma,
+                      weifeng=weifengs,
+                      **j)
 
 
 # class search:
