@@ -1,8 +1,15 @@
-
-
 <!---->
       <div class="container">
           <div class="span7">
+              <div class="subheader editors-on-duty hide" style="display: block;">
+                  <span class="editors-on-duty-text">
+                     _>这是啥？ {{info}}
+                  </span>
+                  <!--<span class="submit-link">-->
+                      <!--<a href="/" aria-hidden="true" class="glyph-mail glyph " data-container="body" data-toggle="tooltip" title="" data-original-title="Submit a link"></a></span>-->
+
+</div>
+
             <div class="subheader editors-on-duty hide">
             </div>
 
@@ -12,43 +19,49 @@
             </div>
 
             <div class="stream now">
+                {% for td in article %}
               <div class="items">
-                  <div class="item type-text item-415018 importance3">
+                  <div class="item type-live_video item-415118 importance3">
       <h3 class="topic">
-            <a  class="topic-name" title="">帖子发表于:2010-07-07</a>
+          <a href="#" aria-hidden="true" class="glyph-bookmark favorite glyph" data-toggle="tooltip" title="" data-original-title="Save"></a>
+            <a  class="topic-name" title="">帖子发表于:{{td.date}}</a>
+
       </h3>
   <div class="cell">
+      <time class="relative-timestamp" ><span class="t-value">{{td.cid}}</span><span class="t-unit">L</span></time>
     <h2>
-    <div class="headline">帖子标题信息</div>
+    <div class="headline"><a href="{{ td.link }}" target="_blank">{{ td.post }}</a></div>
     </h2>
     <div class="meta link ">
-        <p class="readmore original">来源  <span class="domain">电玩巴士</span></p>
+        <p class="readmore original">来源  <span class="domain">{{ td.name }}</span></p>
     </div>
+
     <div class="extended">
       <div class="topic-list filed-under fullnames hidden">
         <ul></ul>
       </div>
-
     </div>
-
+<span class="addthis_org_cn">
+<a i="0|28|48" href="http://addthis.org.cn/share/" class="whoa-button" title="Whoa!"></a>
+</span>
      <div class="whoa-total">
     </div>
 
   </div>
 </div>
-
               </div>
+                 {% if loop.index%5 == 0 and not loop.last %}
+        {% endif %}
+    {% endfor %}
               <div class="mutedbutton hidden"><p><span class="count"></span> muted item<span class="muted-count-pluralize"></span> in
               <span class="muted-topic-names"></span>
               </p></div>
-              <div class="more clearfix">
-                  <div class="morecontainer">
-                  <a href="" class="btn btn-large btn-block">Loading…</a>
-                    </div>
-              </div>
+  <ul class="pagination">
+        {% for p in page %}
+         <li>{{ p }}</li>
+        {% endfor %}
+    </ul>
             </div>
-
-
           </div>
         <div class="sidebar">
 
@@ -82,6 +95,25 @@
             </li>
 		</ul>
 	</div>
+            <!---->
+     <div class="topic-list ongoing-stories fullnames">
+		<ul>
+	<li class="topic topic-72061"><a href="/topic/israeli-palestinian-conflict/" aria-hidden="true" class="glyph-bookmark favorite glyph" data-toggle="tooltip" title="" data-original-title="Save"></a>
+<a class="topic-name">联系方式</a>
+</li>
+</ul>
+	</div>
+
+
+	<div class="about-more padded">
+        <div class="subheader"> </div>
+		<ul>
+	    <li>ID: 肾虚公子</li>
+        <li>Code:<a href="https://github.com/ShenXuGongZi">GitHub</a></li>
+		</ul>
+	</div>
+
+
 
         </div><!--/.fluid-container-->
 

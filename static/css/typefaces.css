@@ -1,0 +1,34 @@
+/*Declaring bold and regular with the same family name allows regular font-weight to grab bold without having to specify the explicit face.*/
+
+@font-face {
+        font-family: 'ProximaNova';
+    src: url('../typefaces/proximanova_regular_macroman/ProximaNova-Reg-webfont.eot');
+    src: url('../typefaces/proximanova_regular_macroman/ProximaNova-Reg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../typefaces/proximanova_regular_macroman/ProximaNova-Reg-webfont.svg#ProximaNovaRgRegular') format('svg'),
+         url('../typefaces/proximanova_regular_macroman/ProximaNova-Reg-webfont.woff') format('woff'),
+         url('../typefaces/proximanova_regular_macroman/ProximaNova-Reg-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	    font-family: 'ProximaNova';
+    src: url('../typefaces/proximanova_regular_macroman/ProximaNova-Bold-webfont.eot');
+    src: url('../typefaces/proximanova_regular_macroman/ProximaNova-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../typefaces/proximanova_regular_macroman/ProximaNova-Bold-webfont.svg#ProximaNovaRgBold') format('svg'),
+         url('../typefaces/proximanova_regular_macroman/ProximaNova-Bold-webfont.woff') format('woff'),
+         url('../typefaces/proximanova_regular_macroman/ProximaNova-Bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: 'breakingnews';
+    src:    url('../typefaces/icons/breakingnews.eot');
+    src:    url('../typefaces/icons/breakingnews.eot?iefix') format('embedded-opentype'),
+            url('../typefaces/icons/breakingnews.svg#breakingnews-regular') format('svg'),
+            url('../typefaces/icons/breakingnews.woff') format('woff'),
+            url('../typefaces/icons/breakingnews.ttf') format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}

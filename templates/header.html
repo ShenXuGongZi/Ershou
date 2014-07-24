@@ -1,57 +1,66 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
-     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-<title>{{title}}</title>
-    <link rel="stylesheet" href="/static/css/style.css"/>
-    <link rel="stylesheet" href="/static/css/bootstrap.css"/>
-    <script type="text/javascript">
+    <title>{{title}}</title>
+    <meta charset="utf-8">
+    <link href="/static/css/bootstrap-edit.css" rel="stylesheet">
+    <link href="/static/css/bootstrap-web.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+
+    <script type="text/javascript" src="http://china-addthis.googlecode.com/svn/trunk/addthis.js" charset="UTF-8"></script>
+
+        <script type="text/javascript">
 var domainroot="ershou.miaowu.asia"
 function Gsitesearch(curobj){
 curobj.q.value="site:"+domainroot+" "+curobj.qfront.value
 }
 </script>
 </head>
-<body>
-<div class="menu">
-<nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
-    <div class="ershoulogo">
-      <a href="{{homelink}}">
-        <!--{{title}} -->
-          <img src="/static/ershou_logo.png" alt="{{title}}"/>
-      </a>
-    </div>
-      <p class="navbar-text">{{info}}</p>
-      <div class="nav-search">
-    <form action="https://www.Google.com.hk/search" method="get" onSubmit="Gsitesearch(this)">
-    <input name="q" type="hidden" />
-    <input name="qfront" type="text" class="form-control" placeholder="搜索你感兴趣的物品吧"style="width: 180px" />
-    <!--<input type="submit" class="btn btn-success" value="开始搜索">-->
-    </form>
-</div>
-  </div>
 
-</nav>
+ <body >
+      <div class="container site-header">
+      <header id="site-header">
+        <a href="{{homelink}}" class="title container" title="Home">
+          <span href="{{homelink}}" aria-hidden="true" class="glyph-home logo-home hidden"></span>
+          <h4 class="logo-text">淘二手，就选庙!</h4>
+        </a>
+        <nav>
+          <div class="user-topics search-topics">
+            <a class="navitem" title="Search topics">
+                <span class="navlabel hidden">搜索你要的</span>
+            </a>
+            <form action="https://www.Google.com.hk/search" method="get" class="topicsearch" onSubmit="Gsitesearch(this)" style="display:inline;">
+              <span class="twitter-typeahead" style="position: relative; display: inline-block;">
+                  <input name="q" type="hidden" />
+                  <input name="qfront" class="topicsearch tt-input" type="text" placeholder="搜索你要的"  style="position: relative; vertical-align: top; background-color: transparent;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: nowrap; font-family: ProximaNova, helvetica, arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: uppercase;"></pre><span class="tt-dropdown-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div class="tt-dataset-0"></div></span></span>
+            </form>
+          </div>
+          <div class="user-topics saved-topics">
+            <a href="/" class="navitem" title="Saved topics">
+                <span aria-hidden="true" class="glyph-bookmark glyph" data-original-title="" title="">
 
-    <div class="estable">
-    <div class="kztable">
-    <ul>
-        <li><a href="{{game}}">电玩巴士</a></li>
-        <li><a href="{{shuma}}">数码之家</a></li>
-        <li><a href="{{weifeng}}">威锋</a></li>
-    </ul>
+                </span><span class="navlabel">收藏本站(Ctrl+D)</span></a>
+            <div class="topic-list saved-topics fullnames hidden dropdown">
+              <ul>
+                <li class="topic noresults">Tap <span aria-hidden="true" class="glyph-bookmark glyph" data-original-title="" title=""></span> on a topic to save it here</li>
+              </ul>
+            </div>
+          </div>
+          <div class="user-topics muted-topics">
+            </div>
+          </div>
+        </nav>
+      </header>
     </div>
-    </div>
-</div>
+    <section class="page now" id="stream">
 
- <div class="centers">
-<p><span class="glyphicon glyphicon glyphicon-bullhorn"></span>&nbsp;{{gonggao_h}}</p>
-    <table class="table">
-        <thead>
-        <tr>
-          <th>交易帖子</th>
-          <th>来源</th>
-          <th>发帖时间</th>
-        </tr>
-      </thead>
+        <header class="section">
+          <div class="container">
+            <div class="span7 pagetitle">
+              <a href="{{homelink}}" aria-hidden="true" class="glyph-logo logo-mark" title="Home"></a>
+              <h1><a href="{{homelink}}">{{title}}</a></h1>
+            </div>
+              <div class="actions stream-actions">
+                <a href="#" aria-hidden="true" class="map glyph-world-america glyph"></a>
+              </div>
+          </div>
+        </header>

@@ -6,7 +6,7 @@ from web.contrib.template import  render_jinja
 db = web.database(dbn='sqlite',db='./DB/ershou.db')
 
 #title跟LOGO位置
-webname = u'喵喵的二手站'
+webname = u'二手庙'
 #公告区域
 Gonggao_S = u'小站才开张请扩散喵！'
 #底部

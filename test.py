@@ -64,7 +64,7 @@ class Ershou:
 # if __name__ == '__main__':
 # Ershou("http://bbs.tgbus.com/forum-50-2.html",'http://bbs.tgbus.com/','TGbus','DianWan')
 # Ershou("http://bbs.mydigit.cn/thread.php?fid=73&page=2",'http://bbs.mydigit.cn/','mydigit','Shuma')
-Ershou('http://bbs.feng.com/forum.php?mod=forumdisplay&fid=29&page=2','http://bbs.feng.com/','WeiFeng','Shuma')
+# Ershou('http://bbs.feng.com/forum.php?mod=forumdisplay&fid=29&page=2','http://bbs.feng.com/','WeiFeng','Shuma')
 
 
 # conn = sqlite3.connect('./DB/ershou.db')
@@ -86,9 +86,12 @@ Ershou('http://bbs.feng.com/forum.php?mod=forumdisplay&fid=29&page=2','http://bb
 # ss = time.strftime("%Y-%m-%d",time.strptime(rr,"%Y-%m-%d"))
 # print ss
 
+from random import choice
 
+suiji = dict(a=1, c=5)
+suiji2 = suiji[choice(suiji.keys())]
 
-
+print suiji2
 
 
 
