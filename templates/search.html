@@ -1,14 +1,149 @@
 {% include "header.html" %}
-    <tbody>
-    {% for post in searchs %}
-    <tr>
-        <td><a href="{{post[2]}}" target="_blank">{{post[1]}}</a></td>
-        <td>{{post[3]}}</td>
-        <td>{{post[4]}}</td>
-
-    {% endfor %}
-    </table>
-
+<!---->
+      <div class="container">
+          <div class="span7">
+              <div class="subheader editors-on-duty hide" style="display: block;">
+                  <span class="editors-on-duty-text">
+                     _>这是啥？ {{info}}
+                  </span>
+                  <!--<span class="submit-link">-->
+                      <!--<a href="/" aria-hidden="true" class="glyph-mail glyph " data-container="body" data-toggle="tooltip" title="" data-original-title="Submit a link"></a></span>-->
 
 </div>
-{% include "footer.html" %}
+
+            <div class="subheader editors-on-duty hide">
+            </div>
+
+            <div class="livevideo">
+              <div class="items">
+              </div>
+            </div>
+
+            <div class="stream now">
+                {% for post in searchs %}
+              <div class="items">
+                  <div class="item type-live_video item-415118 importance3">
+      <h3 class="topic">
+          <a href="#" aria-hidden="true" class="glyph-bookmark favorite glyph" data-toggle="tooltip" title="" data-original-title="Save"></a>
+            <a  class="topic-name" title="">帖子发表于:{{post[4]}}</a>
+
+      </h3>
+  <div class="cell">
+      <time class="relative-timestamp" ><span class="t-value">{{post[0]}}</span><span class="t-unit">L</span></time>
+    <h2>
+    <div class="headline"><a href="{{post[2]}}" target="_blank">{{post[1]}}</a></div>
+    </h2>
+    <div class="meta link ">
+        <p class="readmore original">来源  <span class="domain">{{post[3]}}</span></p>
+    </div>
+
+    <div class="extended">
+      <div class="topic-list filed-under fullnames hidden">
+        <ul></ul>
+      </div>
+    </div>
+<span class="addthis_org_cn">
+<a i="0|28|48" href="http://addthis.org.cn/share/" class="whoa-button" title="Whoa!"></a>
+</span>
+     <div class="whoa-total">
+    </div>
+
+  </div>
+</div>
+              </div>
+    {% endfor %}
+              <div class="mutedbutton hidden"><p><span class="count"></span> muted item<span class="muted-count-pluralize"></span> in
+              <span class="muted-topic-names"></span>
+              </p></div>
+  <ul class="pagination">
+        {% for p in page %}
+         <li>{{ p }}</li>
+        {% endfor %}
+    </ul>
+            </div>
+          </div>
+        <div class="sidebar">
+
+	<div class="topic-list ongoing-stories fullnames">
+		<div class="subheader">感谢以下企业的大力赞助:</div>
+		<div class="padded">
+            <img src="https://d13yacurqjgara.cloudfront.net/users/22127/screenshots/1459128/dribb.png" alt=""/>
+                <center>
+            <p class="subheader"><a href="mailto:522375333@qq.com" class="btn btn-success">广告赞助联系</a></p>
+                </center>
+		</div>
+	</div>
+
+	<div class="topic-list ongoing-stories fullnames">
+        <div class="subheader">庙是你淘二手的好选择! xmiao.org </div>
+		<ul>
+	<li class="topic topic-72061"><a href="#" aria-hidden="true" class="glyph-bookmark favorite glyph" data-toggle="tooltip" title="" data-original-title="Save"></a>
+<a class="topic-name">来源分类</a>
+</li>
+</ul>
+	</div>
+
+
+	<div class="about-more padded">
+        <div class="subheader"> </div>
+		<ul>
+			<li class="about">
+                <a class="link" href="{{game}}">电玩巴士</a>
+            </li>
+            <li class="about">
+                <a class="link" href="{{shuma}}">数码之家</a>
+            </li>
+            <li class="about">
+                <a class="link" href="{{weifeng}}">威锋</a>
+            </li>
+		</ul>
+	</div>
+            <!---->
+     <div class="topic-list ongoing-stories fullnames">
+		<ul>
+	<li class="topic topic-72061"><a href="#" aria-hidden="true" class="glyph-bookmark favorite glyph" data-toggle="tooltip" title="" data-original-title="Save"></a>
+<a class="topic-name">联系方式</a>
+</li>
+</ul>
+	</div>
+
+
+	<div class="about-more padded">
+        <div class="subheader"> </div>
+		<ul>
+	    <li>ID: 肾虚公子</li>
+        <li>Code:<a href="https://github.com/ShenXuGongZi">GitHub</a></li>
+		</ul>
+	</div>
+            <!---->
+<div class="topic-list ongoing-stories fullnames">
+		<ul>
+	<li class="topic topic-72061"><a href="#" aria-hidden="true" class="glyph-bookmark favorite glyph" data-toggle="tooltip" title="" data-original-title="Save"></a>
+<a class="topic-name">友情链接</a>
+</li>
+</ul>
+	</div>
+
+
+	<div class="about-more padded">
+        <div class="subheader"> </div>
+		<ul>
+	    <li><a href="http://douban.miaowu.asia/" target="_blank">豆瓣小组图片采集器</a></li>
+            <li><a href="mailto:522375333@qq.com">申请友情链接</a></li>
+		</ul>
+	</div>
+
+
+        </div><!--/.fluid-container-->
+
+      </div>
+   </section>
+
+
+	<div id="about-wrapper" data-name="about"></div>
+
+  <!--[if lte IE 8]>
+      <link rel="stylesheet" href="//breaking-news.s3.amazonaws.com/js/thirdparty/leaflet-0.7.3/leaflet.ie.css" />
+  <![endif]-->
+
+        {% include "footer.html" %}

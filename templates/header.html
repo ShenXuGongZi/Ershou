@@ -7,13 +7,6 @@
     <link href="/static/css/style.css" rel="stylesheet">
 
     <script type="text/javascript" src="http://china-addthis.googlecode.com/svn/trunk/addthis.js" charset="UTF-8"></script>
-
-        <script type="text/javascript">
-var domainroot="ershou.miaowu.asia"
-function Gsitesearch(curobj){
-curobj.q.value="site:"+domainroot+" "+curobj.qfront.value
-}
-</script>
 </head>
 
  <body >
@@ -28,11 +21,13 @@ curobj.q.value="site:"+domainroot+" "+curobj.qfront.value
             <a class="navitem" title="Search topics">
                 <span class="navlabel hidden">搜索你要的</span>
             </a>
-            <form action="https://www.Google.com.hk/search" method="get" class="topicsearch" onSubmit="Gsitesearch(this)" style="display:inline;">
+
+            <form action="/search?name=" method="get" class="topicsearch"  style="display:inline;">
               <span class="twitter-typeahead" style="position: relative; display: inline-block;">
-                  <input name="q" type="hidden" />
-                  <input name="qfront" class="topicsearch tt-input" type="text" placeholder="搜索你要的"  style="position: relative; vertical-align: top; background-color: transparent;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: nowrap; font-family: ProximaNova, helvetica, arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: uppercase;"></pre><span class="tt-dropdown-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div class="tt-dataset-0"></div></span></span>
+                  <input name="name" class="topicsearch tt-input" type="text" placeholder="搜索你要的"  style="position: relative; vertical-align: top; background-color: transparent;">
+                  <pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: nowrap; font-family: ProximaNova, helvetica, arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: uppercase;"></pre><span class="tt-dropdown-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div class="tt-dataset-0"></div></span></span>
             </form>
+
           </div>
           <div class="user-topics saved-topics">
             <a href="/" class="navitem" title="Saved topics">
@@ -49,9 +44,7 @@ curobj.q.value="site:"+domainroot+" "+curobj.qfront.value
             </div>
           </div>
         </nav>
-      </header>
-    </div>
-    <section class="page now" id="stream">
+         <section class="page now" id="stream">
 
         <header class="section">
           <div class="container">
@@ -63,4 +56,5 @@ curobj.q.value="site:"+domainroot+" "+curobj.qfront.value
                 <a href="#" aria-hidden="true" class="map glyph-world-america glyph"></a>
               </div>
           </div>
-        </header>
+      </header>
+

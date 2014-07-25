@@ -4,14 +4,19 @@ from web import storage
 import model
 from tpl import render_home as render
 from setting import *
+import sys
+
+#解决中文问题
+reload(sys)
+sys.setdefaultencoding('utf8')
 
 j = storage()
 
 
-class index:
-    def GET(self):
-        referer = web.ctx.env.get('HTTP_REFERER', '/index/page/1')
-        raise web.seeother(referer)
+# class index(object):
+#     def GET(self):
+#         web.HTTPError('301',{'Location':'/index/page/1'})
+
 #主页数据
 class page:
     def GET(self, p='10'):
@@ -98,16 +103,25 @@ class weifeng:
 #                       )
 
 #搜索实验
-class SomePage:
-    def GET(self,name):
+class search(object):
+    def GET(self):
         conn = sqlite3.connect('./DB/ershou.db')
+        #解决数据库不能查询中文问题
+        conn.text_factory = str
         LjDB = conn.cursor()
-        searcher = web.input()
-        DBsearch = LjDB.execute("select * from caiji where post like ?",
-                            ('%{}%'.format(searcher),))
-        tt = DBsearch[1]
-        return searcher.tt.name
-        # return render('SomePage',
-        #               searchs=DBsearch)
+        i = web.input(name=None)
+        c = LjDB.execute("select * from caiji where post like ?",
+                            ('%{}%'.format(i.name),))
+        # return "Listing info about user:{0} ".i.name
+        return render('search',
+                      searchs=c,
+                      title=webname,
+                      gonggao_h=Gonggao_S,
+                      footer=dibu,
+                      info=fubiaoti,
+                      homelink=weblink,
+                      game=dwgame,
+                      shuma=dwshuma,
+                      weifeng=weifengs,)
 
 

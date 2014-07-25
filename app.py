@@ -9,7 +9,7 @@ urls = (
     "/smzj/page/(\d+)", "shuma",
     "/weifeng/page/(\d+)", "weifeng",
     # "/search", "search",
-    "/search/(.*)", "SomePage",
+    "/search", "search",
 )
 
 
