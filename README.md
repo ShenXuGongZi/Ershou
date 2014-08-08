@@ -1,3 +1,9 @@
+
+![](http://img.shields.io/codeclimate/coverage/github/triAGENS/ashikawa-core.svg)  ![](http://img.shields.io/badge/Python-2.7-green.svg)
+![](http://img.shields.io/pypi/l/Django.svg)
+
+###中文说明请看 [http://shenxugongzi.github.io/Ershou/](http://shenxugongzi.github.io/Ershou/)
+
 ### Sites for Ubuntu installation guide here refers to other systems, please refer to 
 
 Web.py framework based on the production of this site is divided into two parts, the data crawling and web show. Database using sqlite 
