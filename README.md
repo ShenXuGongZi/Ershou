@@ -1,6 +1,7 @@
 
-![](http://img.shields.io/codeclimate/coverage/github/triAGENS/ashikawa-core.svg)  ![](http://img.shields.io/badge/Python-2.7-green.svg)
-![](http://img.shields.io/pypi/l/Django.svg)
+![](http://img.shields.io/codeclimate/coverage/github/triAGENS/ashikawa-core.svg) 
+&nbsp;![](http://img.shields.io/badge/Python-2.7-green.svg)
+&nbsp;![](http://img.shields.io/pypi/l/Django.svg)
 
 ###中文说明请看 [http://shenxugongzi.github.io/Ershou/](http://shenxugongzi.github.io/Ershou/)
 
